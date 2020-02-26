@@ -9,6 +9,10 @@ import { HttpClient } from "@angular/common/http";
 export class DataService {
   constructor(private http: HttpClient) {}
 
+  getSubscriptionTypes(): Observable<string[]> {
+    return of(["monthly", "annual", "lifetime"]);
+  }
+
   postUserSettingsForms(userSettings: UserSettings): Observable<any> {
     return this.http.post(
       "https://putsreq.com/bjdwrnRYap16otValQCP",
