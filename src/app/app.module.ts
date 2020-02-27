@@ -4,10 +4,12 @@ import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { ButtonsModule } from "ngx-bootstrap";
 import { BsDatepickerModule } from "ngx-bootstrap/datepicker";
+import { TimepickerModule } from "ngx-bootstrap";
+import { RatingModule } from "ngx-bootstrap";
 
 import { AppComponent } from "./app.component";
 import { UserSettingsFormComponent } from "./user-settings-form/user-settings-form.component";
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [AppComponent, UserSettingsFormComponent],
@@ -17,7 +19,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     ButtonsModule.forRoot(),
     BsDatepickerModule.forRoot(),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    TimepickerModule.forRoot(),
+    RatingModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

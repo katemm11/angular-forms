@@ -31,9 +31,38 @@
         [(ngModel)]="startDate"
         name="startDate"
         id="startDate"
-        bsDaterangepicker
+        bsDatepicker
       />
     </div>
+
+    <div class="form-group">
+      <label for="startTime">Start Time</label>
+      <timepicker
+        [(ngModel)]="startTime"
+        name="startTime"
+        id="startTime"
+      ></timepicker>
+    </div>
+
+    Start Time: {{ startTime }}
+
+    <br />
+
+    <div class="form-group">
+      User Rating
+      <rating
+        [(ngModel)]="userRating"
+        [max]="maxRating"
+        [titles]="['one', 'two', 'three']"
+        name="userRating"
+        id="userRating"
+      ></rating>
+    </div>
+
+    User Rating : {{ userRating }}
+
+    <br />
+    <br />
 
     <!-- 
     <pre class="card card-block card-header">{{ singleModel }}</pre> -->

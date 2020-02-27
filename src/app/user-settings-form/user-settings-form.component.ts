@@ -3,7 +3,6 @@ import { UserSettings } from "../data/user-settings";
 import { NgForm, NgModel } from "@angular/forms";
 import { DataService } from "../data/data.service";
 import { Observable } from "rxjs";
-import { Data } from "ngx-bootstrap/positioning/models";
 
 @Component({
   selector: "app-user-settings-form",
@@ -20,8 +19,11 @@ export class UserSettingsFormComponent implements OnInit {
   };
 
   singleModel = "On";
-
+  startTime: any;
   startDate: Date;
+  userRating: number = 0;
+  maxRating: number = 10;
+
   userSettings: UserSettings = { ...this.originalUserSettings };
   postError = false;
   postErrorMessage = "";
@@ -33,6 +35,7 @@ export class UserSettingsFormComponent implements OnInit {
     this.subscriptionTypes = this.dataService.getSubscriptionTypes();
 
     this.startDate = new Date();
+    this.startTime = new Date();
   }
 
   onBlur(field: NgModel) {
